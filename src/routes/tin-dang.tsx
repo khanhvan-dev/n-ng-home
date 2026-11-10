@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { listings } from "@/lib/listing-data";
 
 export const Route = createFileRoute("/tin-dang")({
-  validateSearch: (search: Record<string, unknown>): { loai?: string; quan?: string } => ({
-    loai: typeof search.loai === "string" ? search.loai : undefined,
-    quan: typeof search.quan === "string" ? search.quan : undefined,
+  validateSearch: (search: Record<string, unknown>): { loai?: string | undefined; quan?: string | undefined } => ({
+    loai: typeof search["loai"] === "string" ? search["loai"] : undefined,
+    quan: typeof search["quan"] === "string" ? search["quan"] : undefined,
   }),
   head: () => ({
     meta: [
@@ -40,8 +40,8 @@ function ListingsPage() {
       <header className="site-header">
         <div className="site-header__inner page-shell">
           <Link className="brand" to="/"><span className="brand__mark"><span>⌂</span></span><span><strong>an cư</strong><small>ĐÀ NẴNG · NHÀ CỦA BẠN</small></span></Link>
-          <nav className="main-nav" aria-label="Điều hướng chính"><Link to="/">Trang chủ</Link><Link to="/tin-dang" className="main-nav__active">Tin đăng</Link><Link to="/#gioi-thieu">Giới thiệu</Link><Link to="/#lien-he">Liên hệ</Link></nav>
-          <div className="site-header__actions"><Link className="login-link" to="/#lien-he">Đăng nhập</Link><Button asChild className="button-pill"><Link to="/#lien-he">Đăng tin <ArrowRight /></Link></Button></div>
+          <nav className="main-nav" aria-label="Điều hướng chính"><Link to="/">Trang chủ</Link><Link to="/tin-dang" className="main-nav__active">Tin đăng</Link><Link to="/" hash="gioi-thieu">Giới thiệu</Link><Link to="/" hash="lien-he">Liên hệ</Link></nav>
+          <div className="site-header__actions"><Link className="login-link" to="/" hash="lien-he">Đăng nhập</Link><Button asChild className="button-pill"><Link to="/" hash="lien-he">Đăng tin <ArrowRight /></Link></Button></div>
         </div>
       </header>
       <section className="listings-page-hero"><div className="page-shell"><Link className="back-link" to="/"><ArrowLeft /> Về trang chủ</Link><span className="eyebrow">TÌM NƠI CHỐN PHÙ HỢP</span><h1>Những ngôi nhà<br /><em>đang chờ bạn.</em></h1><p>Khám phá không gian sống được chọn lọc tại Đà Nẵng.</p></div></section>

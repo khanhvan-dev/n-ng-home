@@ -411,7 +411,7 @@ h2 em, h1 em { color: var(--color-primary); font-style: normal; font-weight: 500
 
 .listings-page { min-height: 100vh; }
 .listings-page-hero { padding: 52px 0 55px; background: oklch(0.95 0.022 163); }
-.listings-page-hero .back-link { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 35px; color: var(--color-muted-foreground); font-size: 10px; }
+.listings-page-hero .back-link { display: flex; width: fit-content; align-items: center; gap: 7px; margin-bottom: 35px; color: var(--color-muted-foreground); font-size: 10px; }
 .back-link svg { width: 14px; height: 14px; }
 .listings-page-hero h1 { margin: 14px 0 12px; font-size: clamp(48px, 6vw, 74px); line-height: .98; }
 .listings-page-hero h1 em { color: var(--color-primary); font-weight: 500; }

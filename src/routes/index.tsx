@@ -27,6 +27,7 @@ import heroImage from "@/assets/da-nang-coastal-hero.jpg";
 import apartmentImage from "@/assets/da-nang-city-apartment.jpg";
 import familyImage from "@/assets/da-nang-family-home.jpg";
 import beachImage from "@/assets/da-nang-beach-lifestyle.jpg";
+import coastalImage from "@/assets/da-nang-coastal-hero.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -78,7 +79,12 @@ const guides = [
 function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [reviewIndex, setReviewIndex] = useState(0);
-  const activeReview = reviews[reviewIndex];
+  const activeReview = reviews[reviewIndex] ?? {
+    name: "Ngọc Anh",
+    role: "Người tìm nhà tại Đà Nẵng",
+    quote: "Mình tìm được căn hộ vừa vặn chỉ sau một cuối tuần.",
+    initials: "NA",
+  };
 
   return (
     <main>
