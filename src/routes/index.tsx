@@ -28,6 +28,9 @@ import apartmentImage from "@/assets/da-nang-city-apartment.jpg";
 import familyImage from "@/assets/da-nang-family-home.jpg";
 import beachImage from "@/assets/da-nang-beach-lifestyle.jpg";
 import coastalImage from "@/assets/da-nang-coastal-hero.jpg";
+import lifestyleBeachImage from "@/assets/lifestyle-beach-home.jpg";
+import lifestyleCityImage from "@/assets/lifestyle-city-center.jpg";
+import lifestyleFamilyImage from "@/assets/lifestyle-family-home.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -227,9 +230,9 @@ function HomePage() {
         <div className="page-shell">
           <div className="section-heading section-heading--row"><div><span className="eyebrow">ĐÀ NẴNG THEO CÁCH CỦA BẠN</span><h2 id="lifestyle-title">Bạn muốn sống<br /><em>như thế nào?</em></h2></div><p>Chọn một nhịp sống — bắt đầu hành trình tìm nơi chốn mang cảm giác của riêng mình.</p></div>
           <div className="lifestyle-grid">
-            <a className="life-card life-card--large" href="/tin-dang?loai=gan-bien"><img src={beachImage} alt="Nhà và bãi biển Mỹ Khê" width={1280} height={960} loading="lazy" /><span className="life-card__number">01</span><span className="life-card__copy"><small>BIỂN Ở NGAY BÊN</small><strong>Sống gần biển</strong><span>Mở cửa là nghe sóng vỗ <ArrowUpRight /></span></span></a>
-            <a className="life-card life-card--city" href="/tin-dang?quan=hai-chau"><img src={apartmentImage} alt="Căn hộ trung tâm nhìn ra sông và phố" width={1280} height={960} loading="lazy" /><span className="life-card__number">02</span><span className="life-card__copy"><small>NHỊP PHỐ THÂN QUEN</small><strong>Sống giữa trung tâm</strong><span>Chạm gần mọi điều <ArrowUpRight /></span></span></a>
-            <a className="life-card life-card--family" href="/tin-dang?loai=nha-pho"><img src={familyImage} alt="Nhà có khoảng sân xanh cho gia đình" width={1280} height={960} loading="lazy" /><span className="life-card__number">03</span><span className="life-card__copy"><small>THÊM KHOẢNG THỞ</small><strong>Không gian gia đình</strong><span>Một khoảng xanh cho nhau <ArrowUpRight /></span></span></a>
+            <a className="life-card life-card--large" href="/tin-dang?loai=gan-bien"><img src={lifestyleBeachImage} alt="Ban công căn hộ nhìn ra bãi biển Mỹ Khê" width={1280} height={960} loading="lazy" /><span className="life-card__number">01</span><span className="life-card__copy"><small>BIỂN Ở NGAY BÊN</small><strong>Sống gần biển</strong><span>Mở cửa là nghe sóng vỗ <ArrowUpRight /></span></span></a>
+            <a className="life-card life-card--city" href="/tin-dang?quan=hai-chau"><img src={lifestyleCityImage} alt="Căn hộ trung tâm nhìn ra cầu Rồng và sông Hàn" width={1280} height={960} loading="lazy" /><span className="life-card__number">02</span><span className="life-card__copy"><small>NHỊP PHỐ THÂN QUEN</small><strong>Sống giữa trung tâm</strong><span>Chạm gần mọi điều <ArrowUpRight /></span></span></a>
+            <a className="life-card life-card--family" href="/tin-dang?loai=nha-pho"><img src={lifestyleFamilyImage} alt="Nhà có sân vườn xanh cho gia đình tại Đà Nẵng" width={1280} height={960} loading="lazy" /><span className="life-card__number">03</span><span className="life-card__copy"><small>THÊM KHOẢNG THỞ</small><strong>Không gian gia đình</strong><span>Một khoảng xanh cho nhau <ArrowUpRight /></span></span></a>
           </div>
         </div>
       </section>
